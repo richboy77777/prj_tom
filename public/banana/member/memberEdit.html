@@ -8,32 +8,32 @@
 </head>
 
 <body>
-	<h3>●회원가입●</h3>
+	<h3>●회원정보수정●</h3>
 	<form action="" method="get" id="" name="" enctype="multipart/form-data">
 		<table border="1">
 			<tr>
 				<th width="400">사진</th>
 				<td width="250"><input type="image" src="./tom.jpg" width="300px" height="300px"></td>
 				<th width="400">이름</th>	
-				<td width="300"><input type="text" id="name" name="name" value="이상원" size="40"></td>
+				<td width="300"><input type="text" id="name" name="name" size="20" autofocus="autofocus" value="이상원" disabled></td>
 			</tr>
 			<tr>
 				<th>아이디</th>
-				<td><input type="text" id="id" name="id" value="goodworld" value="goodworld" size="40"></td>
+				<td><input type="text" id="id" name="id"  value="ONLYTOM" size="20" autofocus="autofocus" disabled></td>
 				<th>비밀번호</th>
-				<td><input type="text" id="pass" name="pass" value="summertime" value="summertime" size="40"></td>
+				<td><input type="text" id="pass" name="pass" value="********" value="summertime" size="20" autofocus="autofocus" disabled></td>
 			</tr>
 			<tr>
 				<th>성별</th>			
-				<td><input type="text" id="sex" name="sex" value="남" size="40"></td>
+				<td><input type="text" id="sex" name="sex" value="남" size="5"></td>
 				<th>생일</th>			
 				<td><input type="month" id="month" name="month" value="1992-01"></td>
 			</tr>
 			<tr>
 				<th>국적</th>			
-				<td><input type="text" id="country" name="country" value="대한민국" size="40"></td>
+				<td><input type="text" id="country" name="country" value="대한민국" size="10"></td>
 				<th>주소</th>			
-				<td>우편번호<input type="text" id="address1" name="address1" size="5" value="222">-
+				<td>우편번호 <input type="text" id="address1" name="address1" size="5" value="222">-
 					<input type="text" id="address1" name="address1" size="5" value="333">
 					<br><input type="text" id="address2" name="address2" size="40" value="경기도수원시영통구">
 					</td>
@@ -203,11 +203,12 @@
 			</tr>
 			
 		</table>
+		
+		<br>
+		<button type="button" onclick="location.href='./memberList.html'">목록</button>
 	</form>
 
-	<ul>
-		<li><a href="./memberList.html">목록</a></li>	
-	</ul>
+	
 	
 
 </body>
