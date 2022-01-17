@@ -22,16 +22,71 @@
 
 <h1 align="center" style="color: lightcyan">회원정보</h1>
 
+<div class="modal fade" id="email" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="location.href='https://namu.wiki/w/%EC%A0%9C%ED%94%84%20%EB%B2%A0%EC%9D%B4%EC%A1%B0%EC%8A%A4?from=%EC%A0%9C%ED%94%84%20%EB%B2%A0%EC%A1%B0%EC%8A%A4'">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="phone" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="location.href='https://namu.wiki/w/%EC%A0%9C%ED%94%84%20%EB%B2%A0%EC%9D%B4%EC%A1%B0%EC%8A%A4?from=%EC%A0%9C%ED%94%84%20%EB%B2%A0%EC%A1%B0%EC%8A%A4'">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <table class="table align-middle table-bordered border-primary" style="opacity: 75%;">
 
   <tbody>
 	
 	<tr>
-		<th scope="col" rowspan="5" style="width: 15%" class="text-center table-primary"><h1>사진</h1></th>
-		<td rowspan="5" style="width: 12%"><img src="./tomtom.jpg" width="100%"></td>
-		<th scope="col" style="width: 20%" class="text-center table-success"><h1>이름</h1></th>
-		<td style="width: 25%" class="table-info"><h1>이상원</h1></td>
+		<th scope="col" rowspan="5" style="width: 20%" class="text-center table-primary"><h1>사진</h1></th>
+		<td rowspan="5" style="width: 25%"><img src="./tomtom.jpg" width="100%"></td>
+		<th scope="col" style="width: 25%" class="text-center table-success"><h1>이름</h1></th>
+		<td style="width: 20%" class="table-info"><h1>이상원</h1></td>
 	</tr>
 	
 	<tr>
@@ -69,10 +124,21 @@
 	</tr>
 	
 	<tr>
-		<th class="text-center table-info"><h1>전화번호</h1></th>
+		<th class="text-center table-info"><h1>전화번호</h1>
+		
+		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#phone" data-bs-whatever="@mdo">번호수신</button>
+		
+		
+		</th>
 		<th class="table-success"><h1>555-5558</h1></th>
-		<th class="text-center table-light"><h1>추천인</h1></th>
-		<th class="table-primary"><h1>스티븐스필버그</h1></th>
+		<th class="text-center table-light"><h1>이메일</h1>
+		
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#email" data-bs-whatever="@mdo">이메일수신</button>
+
+
+</th>
+		<th class="table-primary"><h1>goodworld@google.com</h1><th>
+
 	</tr>
 	
 	<tr>
@@ -100,12 +166,12 @@
 		<th class="text-center table-danger"><h1>직업(희망)</h1></th>
 		<th class="table-primary"><h1>풀스택개발자</h1></th>
 		<th class="text-center table-info"><h1>취미</h1></th>
-		<th class="table-warning"><h1>독서</h1></th>
+		<th class="table-warning"><h1>독서 라이딩 걷기</h1></th>
 	</tr>
 	
 	<tr>
 		<th class="text-center table-dark"><h1>결혼여부</h1></th>
-		<th class="table-secondary"><h1>무</h1></th>
+		<th class="table-secondary"><h1>미혼</h1></th>
 		<th class="text-center table-primary"><h1>결혼기념일</h1></th>
 		<th class="table-danger"><h1>미상</h1></th>
 	</tr>
@@ -178,15 +244,51 @@
 	
 	<br>
    
-<div class="d-grid gap-2 col-3 mx-auto" role="group" aria-label="Basic mixed styles example">
-  <button type="button" class="btn btn-primary" onclick="location.href='./memberList.html'"><h1>목록</h1></button>
-  <button type="button" class="btn btn-warning" onclick="location.href='./memberEdit.html'"><h1>수정</h1></button>
-  <button type="button" class="btn btn-success" onclick="location.href='./memberList.html'"><h1>삭제</h1></button>
+ <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-primary me-md-2 btn-lg" type="button" onclick="location.href='./memberList.html'">목록</button>
+  <button class="btn btn-warning btn-lg" type="button" onclick="location.href='./memberList.html'">수정</button>
+  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#삭제">삭제</button>
 </div>
-   
-   
+
+<div class="modal fade" id="삭제" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen-sm-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancle</button>
+        <button type="button" class="btn btn-primary" onclick="location.href='./memberList.html'">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>  
    
     <!--  -->
+    <script type="text/javascript">
+    var exampleModal = document.getElementById('exampleModal')
+    exampleModal.addEventListener('show.bs.modal', function (event) {
+      // Button that triggered the modal
+      var button = event.relatedTarget
+      // Extract info from data-bs-* attributes
+      var recipient = button.getAttribute('data-bs-whatever')
+      // If necessary, you could initiate an AJAX request here
+      // and then do the updating in a callback.
+      //
+      // Update the modal's content.
+      var modalTitle = exampleModal.querySelector('.modal-title')
+      var modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+      modalTitle.textContent = 'New message to ' + recipient
+      modalBodyInput.value = recipient
+    })
+    
+    
+    </script>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
