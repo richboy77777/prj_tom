@@ -25,7 +25,9 @@
 			<tr>
 				<th style="width: 20%" class="text-center table-primary">사진첨부</th>
 				<th style="width: 25%">
-					<img src="./tomtom.jpg">
+					<div class="mb-3">
+						<img src="./tomtom.jpg">
+					</div>
 				</th>
 				<th style="width: 25%" class="text-center table-primary">이름</th>
 				<td style="width: 20%"><div class="row g-3 align-items-center">
@@ -43,13 +45,7 @@
 				<th class="text-center table-primary">아이디</th>
 				<th><div class="row g-3 align-items-center">
 						<div class="col-auto">
-							<label for="inputPassword6" class="col-form-label"></label>
-						</div>
-						<div class="col-auto">
 							<input type="id" id="id" class="form-control" value="goodworld" disabled>
-						</div>
-						<div class="col-auto">
-							<span id="passwordHelpInline" class="form-text"> </span>
 						</div>
 					</div></th>
 				<th class="text-center table-primary">비밀번호</th>
@@ -68,21 +64,21 @@
 
 			<tr>
 				<th class="text-center table-primary">성별</th>
-				<td><input type="radio" class="btn-check" name="options"
-					id="option1" checked autocomplete="off"> <label
+				<td><input type="radio" class="btn-check" name="options1"
+					id="option1" autocomplete="off" checked> <label
 					class="btn btn-primary" for="option1">남자</label> <input
-					type="radio" class="btn-check" name="options" id="option2"
+					type="radio" class="btn-check" name="options1" id="option2"
 					autocomplete="off"> <label class="btn btn-danger"
 					for="option2">여자</label></td>
 				<th class="text-center table-primary">생일</th>
-				<td><input type="month" id="month" name="month"></td>
+				<td><input type="month" id="month" name="month" value="1992-01" disabled></td>
 			</tr>
 
 			<tr>
 				<th class="text-center table-primary">국적</th>
 				<td><label for="exampleDataList" class="form-label"> </label> <input
 					class="form-control" list="datalistOptions" id="exampleDataList"
-					placeholder="Type to search..."> <datalist
+					placeholder="Type to search..." value="South Korea"> <datalist
 						id="datalistOptions">
 						<option value="South Korea">
 						<option value="New York">
@@ -93,9 +89,9 @@
 				<th class="text-center table-primary">주소</th>
 				<td>
 					<div class="col-md-3">
-						<label for="addr1" class="form-label"></label> <select
-							class="form-select" id="addr1" required>
-							<option selected disabled value="">우편번호검색</option>
+						<label for="addr1" class="form-label"></label> 
+						<select class="form-select" id="addr1" required disabled>
+							<option selected disabled value="">777-777</option>
 							<option>...</option>
 						</select>
 						<div class="invalid-feedback">Please select a valid state.</div>
@@ -105,7 +101,7 @@
 							<label for="addr" class="col-form-label"></label>
 						</div>
 						<div class="col-auto">
-							나머지주소 <input type="addr2" id="addr2" class="form-control">
+							나머지주소 <input type="addr2" id="addr2" class="form-control" value="경기도 수원시 영통구">
 						</div>
 
 					</div>
@@ -117,13 +113,14 @@
 				<th class="text-center table-primary">모바일</th>
 				<td>
 					<div class="col-md-3">
-						<select class="form-select">
-							<option selected>통신사</option>
+						<select class="form-select" disabled>
+							<option selected>SKT</option>
 							<option value="1">SKT</option>
 							<option value="2">KT</option>
 							<option value="3">LGU+</option>
-						</select> <select class="form-select">
-							<option selected>세자리</option>
+						</select>
+						 <select class="form-select" disabled>
+							<option selected>010</option>
 							<option value="4">010</option>
 							<option value="5">011</option>
 							<option value="6">019</option>
@@ -131,10 +128,7 @@
 					</div>
 					<div class="row g-3 align-items-center">
 						<div class="col-auto">
-							<label for="num1" class="col-form-label"></label>
-						</div>
-						<div class="col-auto">
-							<input type="num1" id="num1" class="form-control">
+							<input type="num1" id="num1" class="form-control" value="7777-7777" disabled>
 						</div>
 
 					</div>
@@ -142,10 +136,10 @@
 				<th class="text-center table-primary">팩스번호</th>
 				<td>
 					<div class="input-group mb-3">
-						<button type="button" class="btn btn-outline-primary">지역번호</button>
+						<button type="button" class="btn btn-outline-primary">031</button>
 						<button type="button"
 							class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
-							data-bs-toggle="dropdown" aria-expanded="false">
+							data-bs-toggle="dropdown" aria-expanded="false" disabled>
 							<span class="visually-hidden">Toggle Dropdown</span>
 						</button>
 						<ul class="dropdown-menu">
@@ -155,8 +149,8 @@
 							<li><hr class="dropdown-divider"></li>
 							<li><a class="dropdown-item" href="#">055</a></li>
 						</ul>
-						<input type="text" class="form-control"
-							aria-label="Text input with segmented dropdown button">
+						<input type="text" class="form-control" value="8888-8888" disabled>
+							
 					</div>
 				</td>
 			</tr>
@@ -165,10 +159,10 @@
 			<tr>
 				<th class="text-center table-primary">전화번호</th>
 				<td><div class="input-group mb-3">
-						<button type="button" class="btn btn-outline-primary">지역번호</button>
+						<button type="button" class="btn btn-outline-primary">031</button>
 						<button type="button"
 							class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
-							data-bs-toggle="dropdown" aria-expanded="false">
+							data-bs-toggle="dropdown" aria-expanded="false" disabled>
 							<span class="visually-hidden">Toggle Dropdown</span>
 						</button>
 						<ul class="dropdown-menu">
@@ -178,14 +172,13 @@
 							<li><hr class="dropdown-divider"></li>
 							<li><a class="dropdown-item" href="#">005</a></li>
 						</ul>
-						<input type="text" class="form-control"
-							aria-label="Text input with segmented dropdown button">
+						<input type="text" class="form-control" value="777-7777" disabled>
 					</div></td>
 				<th class="text-center table-primary">모바일 마케팅 수신동의</th>
-				<td><input type="radio" class="btn-check" name="options"
-					id="option3" checked autocomplete="off"> <label
+				<td><input type="radio" class="btn-check" name="options2"
+					id="option3" autocomplete="off" checked> <label
 					class="btn btn-primary" for="option3">동의</label> <input
-					type="radio" class="btn-check" name="options" id="option4"
+					type="radio" class="btn-check" name="options2" id="option4"
 					autocomplete="off"> <label class="btn btn-danger"
 					for="option4">미동의</label></td>
 
@@ -197,22 +190,22 @@
 				<td><div class="mb-3">
 						<label for="exampleFormControlInput1" class="form-label">
 						</label> <input type="email" class="form-control"
-							id="exampleFormControlInput1" placeholder="name@example.com">
+							id="exampleFormControlInput1" placeholder="name@example.com" value="goodworld@gmail.com" disabled>
 					</div></td>
 				<th class="text-center table-primary">이메일 마케팅 수신동의</th>
-				<td><input type="radio" class="btn-check" name="options"
-					id="option5" checked autocomplete="off"> <label
+				<td><input type="radio" class="btn-check" name="options3"
+					id="option5" autocomplete="off" checked> <label
 					class="btn btn-primary" for="option5">동의</label> <input
-					type="radio" class="btn-check" name="options" id="option6"
+					type="radio" class="btn-check" name="options3" id="option6"
 					autocomplete="off"> <label class="btn btn-danger"
 					for="option6">미동의</label></td>
 			</tr>
 
 
 			<tr>
-				<th class="text-center table-primary">비밀번호문제</th>
+				<th class="text-center table-primary">내가 가장 좋아하는 음식은?</th>
 				<td><select class="form-select form-select-sm"
-					aria-label=".form-select-sm example">
+					aria-label=".form-select-sm example" disabled>
 						<option selected>비밀번호문제</option>
 						<option value="1">내가 태어난 곳은?</option>
 						<option value="2">내가 가장 좋아하는 음식은?</option>
@@ -221,10 +214,7 @@
 				<th class="text-center table-primary">비밀번호답</th>
 				<td><div class="row g-3 align-items-center">
 						<div class="col-auto">
-							<label for="answer" class="col-form-label"></label>
-						</div>
-						<div class="col-auto">
-							<input type="answer" id="answer" class="form-control">
+							<input type="answer" id="answer" class="form-control" value="바지락 칼국수" disabled>
 						</div>
 					</div></td>
 
@@ -235,19 +225,13 @@
 				<th class="text-center table-primary">추천인</th>
 				<td><div class="row g-3 align-items-center">
 						<div class="col-auto">
-							<label for="good" class="col-form-label"></label>
-						</div>
-						<div class="col-auto">
-							<input type="good" id="good" class="form-control">
+							<input type="good" id="good" class="form-control" value="톰크루즈" disabled>
 						</div>
 					</div></td>
 				<th class="text-center table-primary">직업(희망)</th>
 				<td><div class="row g-3 align-items-center">
 						<div class="col-auto">
-							<label for="jobr" class="col-form-label"></label>
-						</div>
-						<div class="col-auto">
-							<input type="job" id="job" class="form-control">
+							<input type="job" id="job" class="form-control" value="풀스택개발자" disabled>
 						</div>
 					</div></td>
 			</tr>
@@ -258,17 +242,17 @@
 				<td>
 				<div class="form-check">
 						<input class="form-check-input" type="checkbox" value=""
-							id="flexCheckDefault">독서<label class="form-check-label"
+							id="flexCheckDefault" checked>독서<label class="form-check-label"
 							for="flexCheckDefault"></label>
 					</div>
 				<div class="form-check">
 						<input class="form-check-input" type="checkbox" value=""
-							id="flexCheckDefault">라이딩<label class="form-check-label"
+							id="flexCheckDefault" checked>라이딩<label class="form-check-label"
 							for="flexCheckDefault"></label>
 					</div>	
 				<div class="form-check">
 						<input class="form-check-input" type="checkbox" value=""
-							id="flexCheckDefault">걷기<label class="form-check-label"
+							id="flexCheckDefault" checked>걷기<label class="form-check-label"
 							for="flexCheckDefault"></label>
 					</div>	
 					
@@ -277,10 +261,7 @@
 				<th class="text-center table-primary">sns</th>
 				<td><div class="row g-3 align-items-center">
 						<div class="col-auto">
-							<label for="sns" class="col-form-label"></label>
-						</div>
-						<div class="col-auto">
-							<input type="sns" id="sns" class="form-control">
+							<input type="sns" id="sns" class="form-control" value="instagram" disabled>
 						</div>
 					</div></td>
 			</tr>
@@ -290,45 +271,39 @@
 				<th class="text-center table-primary">홈페이지</th>
 				<td><div class="row g-3 align-items-center">
 						<div class="col-auto">
-							<label for="homepage" class="col-form-label"></label>
-						</div>
-						<div class="col-auto">
-							<input type="homepage" id="homepager" class="form-control">
+							<input type="homepage" id="homepager" class="form-control" value="goodworld777@naver.com" disabled>
 						</div>
 					</div></td>
 				<th class="text-center table-primary">좋아하는색깔</th>
 				<td><input type="color" class="form-control form-control-color"
-					id="exampleColorInput"></td>
+					id="exampleColorInput" value="#58FDDC" disabled></td>
 			</tr>
 
 
 			<tr>
 				<th class="text-center table-primary">결혼여부</th>
-				<td><input type="radio" class="btn-check" name="options"
+				<td><input type="radio" class="btn-check" name="options4"
 					id="option7" autocomplete="off"> <label
 					class="btn btn-primary" for="option7">기혼</label> <input
-					type="radio" class="btn-check" name="options" id="option8"
-					checked autocomplete="off"> <label class="btn btn-danger"
+					type="radio" class="btn-check" name="options4" id="option8"
+					autocomplete="off" checked> <label class="btn btn-danger"
 					for="option8">미혼</label></td>
 				<th class="text-center table-primary">결혼기념일</th>
-				<td><input type="month" id="month" name="month"></td>
+				<td><input type="month" id="month" name="month" value="2025-01" disabled></td>
 			</tr>
 
 
 			<tr>
 				<th class="text-center table-primary">자녀유무</th>
-				<td><input type="radio" class="btn-check" name="options"
+				<td><input type="radio" class="btn-check" name="options5"
 					id="option9" autocomplete="off"> <label
 					class="btn btn-primary" for="option9">유</label> <input type="radio"
-					class="btn-check" name="options" id="option10" checked autocomplete="off">
+					class="btn-check" name="options5" id="option10" autocomplete="off" checked>
 					<label class="btn btn-danger" for="option10">무</label></td>
 				<th class="text-center table-primary">별명</th>
 				<td><div class="row g-3 align-items-center">
 						<div class="col-auto">
-							<label for="bin" class="col-form-label"></label>
-						</div>
-						<div class="col-auto">
-							<input type="bin" id="bin" class="form-control">
+							<input type="bin" id="bin" class="form-control" value="공무원" disabled>
 						</div>
 					</div></td>
 			</tr>
@@ -339,26 +314,26 @@
 				<td colspan="3"><div class="mb-3">
 						<label for="exampleFormControlTextarea1" class="form-label"></label>
 						<textarea class="form-control" id="exampleFormControlTextarea1"
-							rows="3"></textarea>
+							rows="3" disabled>안녕하세요. 이상원 이라고 합니다.</textarea>
 					</div></td>
 			</tr>
 
 			<tr>
 				<th class="text-center table-primary">개인정보유효기간</th>
 				<td colspan="3"><input type="radio" class="btn-check"
-					name="options" id="option11" autocomplete="off"> <label
-					class="btn btn-primary" for="option12">1년</label> <input
-					type="radio" class="btn-check" name="options" id="option12"
+					name="options6" id="option11" autocomplete="off" checked> <label
+					class="btn btn-primary" for="option11">1년</label> <input
+					type="radio" class="btn-check" name="options6" id="option12"
 					autocomplete="off"> <label class="btn btn-danger"
-					for="option13">3년</label> <input type="radio" class="btn-check"
-					name="options" id="option13" autocomplete="off"> <label
+					for="option12">3년</label> <input type="radio" class="btn-check"
+					name="options6" id="option13" autocomplete="off"> <label
 					class="btn btn-warning" for="option13">5년</label> <input
-					type="radio" class="btn-check" name="options" id="option14"
+					type="radio" class="btn-check" name="options6" id="option14"
 					autocomplete="off"> <label class="btn btn-info"
 					for="option14">7년</label> <input type="radio" class="btn-check"
-					name="options" id="option15" autocomplete="off"> <label
+					name="options6" id="option15" autocomplete="off"> <label
 					class="btn btn-success" for="option15">9년</label> <input
-					type="radio" class="btn-check" name="options" id="option16"
+					type="radio" class="btn-check" name="options6" id="option16"
 					autocomplete="off"> <label class="btn btn-dark"
 					for="option16">10년</label></td>
 			</tr>
@@ -380,63 +355,63 @@
 				<th>1</th>
 				<th>
 					<div class="mb-3">
-						<input type="pn1" id="pn1" class="form-control">
+						<input type="pn1" id="pn1" class="form-control" value="서버관리" disabled>
 					</div>
 				</th>
-				<th><input type="month" id="month" name="month">~<input
-					type="month" id="month" name="month"></th>
+				<th><input type="month" id="month" name="month" value="2022-01" disabled>~<input
+					type="month" id="month" name="month" value="2022-12" disabled></th>
 				<th>
 					<div class="mb-3">
-						<input type="work1" id="work1" class="form-control">
+						<input type="work1" id="work1" class="form-control" value="풀스택개발자" disabled>
 					</div>
 				</th>
 				<th><div class="mb-3">
-						<input type="comp1" id="comp1" class="form-control">
+						<input type="comp1" id="comp1" class="form-control" value="아마존" disabled>
 					</div></th>
 			</tr>
 			<tr>
 				<th>2</th>
 				<th><div class="mb-3">
-						<input type="pn2" id="pn2" class="form-control"></th>
+						<input type="pn2" id="pn2" class="form-control" value="블로그제작" disabled></th>
 				</div>
 				</th>
-				<th><input type="month" id="month" name="month">~<input
-					type="month" id="month" name="month"></th>
+				<th><input type="month" id="month" name="month" value="2022-01" disabled>~<input
+					type="month" id="month" name="month" value="2022-12" disabled></th>
 				<th><div class="mb-3">
-						<input type="work2" id="work2" class="form-control">
+						<input type="work2" id="work2" class="form-control" value="풀스택개발자" disabled>
 					</div></th>
 				<th><div class="mb-3">
-						<input type="comp2" id="comp2" class="form-control">
+						<input type="comp2" id="comp2" class="form-control" value="구글" disabled>
 					</div></th>
 			</tr>
 			<tr>
 				<th>3</th>
 				<th><div class="mb-3">
-						<input type="pn3" id="pn3" class="form-control"></th>
+						<input type="pn3" id="pn3" class="form-control" value="홈페이지제작" disabled></th>
 				</div>
 				</th>
-				<th><input type="month" id="month" name="month">~<input
-					type="month" id="month" name="month"></th>
+				<th><input type="month" id="month" name="month" value="2022-01" disabled>~<input
+					type="month" id="month" name="month" value="2022-12" disabled></th>
 				<th><div class="mb-3">
-						<input type="work3" id="work3" class="form-control">
+						<input type="work3" id="work3" class="form-control" value="풀스택개발자" disabled>
 					</div></th>
 				<th><div class="mb-3">
-						<input type="comp3" id="comp3" class="form-control">
+						<input type="comp3" id="comp3" class="form-control" value="조선일보" disabled>
 					</div></th>
 			</tr>
 			<tr>
 				<th>4</th>
 				<th><div class="mb-3">
-						<input type="pn4" id="pn4" class="form-control"></th>
+						<input type="pn4" id="pn4" class="form-control" value="sns제작" disabled></th>
 				</div>
 				</th>
-				<th><input type="month" id="month" name="month">~<input
-					type="month" id="month" name="month"></th>
+				<th><input type="month" id="month" name="month" value="2022-01" disabled>~<input
+					type="month" id="month" name="month" value="2022-12" disabled></th>
 				<th><div class="mb-3">
-						<input type="work4" id="work4" class="form-control">
+						<input type="work4" id="work4" class="form-control" value="풀스택개발자" disabled>
 					</div></th>
 				<th><div class="mb-3">
-						<input type="comp4" id="comp4" class="form-control">
+						<input type="comp4" id="comp4" class="form-control" value="인스타그램" disabled>
 					</div></th>
 			</tr>
 
