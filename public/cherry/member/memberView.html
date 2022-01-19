@@ -26,14 +26,14 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Send message</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form>
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <input type="text" class="form-control" id="recipient-name" placeholder="goodworld">
           </div>
           <div class="mb-3">
             <label for="message-text" class="col-form-label">Message:</label>
@@ -53,7 +53,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Send message</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -126,17 +126,16 @@
 	<tr>
 		<th class="text-center table-info"><h1>전화번호</h1>
 		
-		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#phone" data-bs-whatever="@mdo">번호수신</button>
-		
+		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#phone" data-bs-whatever="@TOM">SMS</button>
 		
 		</th>
 		<th class="table-success"><h1>555-5558</h1></th>
 		<th class="text-center table-light"><h1>이메일</h1>
 		
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#email" data-bs-whatever="@mdo">이메일수신</button>
+		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#email" data-bs-whatever="@goodworld">이메일수신</button>
 
 
-</th>
+		</th>
 		<th class="table-primary"><h1>goodworld@google.com</h1><th>
 
 	</tr>
@@ -270,7 +269,7 @@
    
     <!--  -->
     <script type="text/javascript">
-    var exampleModal = document.getElementById('exampleModal')
+    var exampleModal = document.getElementById('email')
     exampleModal.addEventListener('show.bs.modal', function (event) {
       // Button that triggered the modal
       var button = event.relatedTarget
@@ -283,9 +282,28 @@
       var modalTitle = exampleModal.querySelector('.modal-title')
       var modalBodyInput = exampleModal.querySelector('.modal-body input')
 
-      modalTitle.textContent = 'New message to ' + recipient
+      modalTitle.textContent = 'Send message to ' + recipient
       modalBodyInput.value = recipient
     })
+ 
+    var exampleModal = document.getElementById('phone')
+	exampleModal.addEventListener('show.bs.modal', function (event) {
+  // Button that triggered the modal
+  var button = event.relatedTarget
+  // Extract info from data-bs-* attributes
+  var recipient = button.getAttribute('data-bs-whatever')
+  // If necessary, you could initiate an AJAX request here
+  // and then do the updating in a callback.
+  //
+  // Update the modal's content.
+  var modalTitle = exampleModal.querySelector('.modal-title')
+  var modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+  modalTitle.textContent = 'Send message to ' + recipient
+  modalBodyInput.value = recipient
+})
+    
+    
     
     
     </script>
