@@ -33,7 +33,7 @@
         <form>
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name" placeholder="goodworld">
+            <input type="text" class="form-control" id="recipient-name">
           </div>
           <div class="mb-3">
             <label for="message-text" class="col-form-label">Message:</label>
@@ -78,7 +78,7 @@
 
 
 
-<table class="table align-middle table-bordered border-primary" style="opacity: 75%;">
+<table class="table align-middle table-hover table-bordered border-primary" style="opacity: 75%;">
 
   <tbody>
 	
@@ -156,9 +156,9 @@
 	
 	<tr>
 		<th class="text-center table-primary" ><h1>sns</h1></th>
-		<th class="table-"><h1>TOMTOM 인스타그램</h1></th>
+		<th class="table-"><a href="https://www.instagram.com/tomcruise/"><h1>instagram</h1></a></th>
 		<th class="text-center table-warning"><h1>홈페이지</h1></th>
-		<th class="table-danger"><h1>TOMTOM@facebook.com</h1></th>
+		<th class="table-danger"><a href="https://ko-kr.facebook.com/officialtomcruise"><h1>facebook</h1></a></th>
 	</tr>
 	
 	<tr>
@@ -199,9 +199,9 @@
 		<hr>
 		<h1 align="center" style="color: lightcyan">※프로젝트※</h1>
 		<br>
-		<table class="table table-bordered border-primary" style="opacity: 75%">
+		<table class="table table-hover table-bordered border-primary" style="opacity: 75%">
   <thead>
-    <tr class="table-primary">
+    <tr class="table-primary text-center">
       <th scope="col"><h1>번호</h1></th>
       <th scope="col"><h1>프로젝트명</h1></th>
       <th scope="col"><h1>참여기간</h1></th>
@@ -246,7 +246,7 @@
  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
   <button class="btn btn-primary me-md-2 btn-lg" type="button" onclick="location.href='./memberList.html'">목록</button>
   <button class="btn btn-warning btn-lg" type="button" onclick="location.href='./memberEdit.html'">수정</button>
-  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#삭제">삭제</button>
+  <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#삭제">삭제</button>
 </div>
 
 <div class="modal fade" id="삭제" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -269,6 +269,7 @@
    
     <!--  -->
     <script type="text/javascript">
+    
     var exampleModal = document.getElementById('email')
     exampleModal.addEventListener('show.bs.modal', function (event) {
       // Button that triggered the modal
@@ -285,28 +286,32 @@
       modalTitle.textContent = 'Send message to ' + recipient
       modalBodyInput.value = recipient
     })
- 
-    var exampleModal = document.getElementById('phone')
-	exampleModal.addEventListener('show.bs.modal', function (event) {
-  // Button that triggered the modal
-  var button = event.relatedTarget
-  // Extract info from data-bs-* attributes
-  var recipient = button.getAttribute('data-bs-whatever')
-  // If necessary, you could initiate an AJAX request here
-  // and then do the updating in a callback.
-  //
-  // Update the modal's content.
-  var modalTitle = exampleModal.querySelector('.modal-title')
-  var modalBodyInput = exampleModal.querySelector('.modal-body input')
-
-  modalTitle.textContent = 'Send message to ' + recipient
-  modalBodyInput.value = recipient
-})
-    
-    
-    
     
     </script>
+    
+    <script type="text/javascript">
+    
+    var exampleModal2 = document.getElementById('phone')
+    exampleModal2.addEventListener('show.bs.modal', function (event) {
+      // Button that triggered the modal
+      var button = event.relatedTarget
+      // Extract info from data-bs-* attributes
+      var recipient = button.getAttribute('data-bs-whatever')
+      // If necessary, you could initiate an AJAX request here
+      // and then do the updating in a callback.
+      //
+      // Update the modal's content.
+      var modalTitle = exampleModal.querySelector('.modal-title')
+      var modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+      modalTitle.textContent = 'Send message to ' + recipient
+      modalBodyInput.value = recipient
+    })
+    
+    </script>
+    
+    
+    
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
