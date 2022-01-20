@@ -49,35 +49,6 @@
   </div>
 </div>
 
-<div class="modal fade" id="phone" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Send message</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="mb-3">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick="location.href='https://namu.wiki/w/%EC%A0%9C%ED%94%84%20%EB%B2%A0%EC%9D%B4%EC%A1%B0%EC%8A%A4?from=%EC%A0%9C%ED%94%84%20%EB%B2%A0%EC%A1%B0%EC%8A%A4'">Send message</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
 <table class="table align-middle table-hover table-bordered border-primary" style="opacity: 75%;">
 
   <tbody>
@@ -125,18 +96,9 @@
 	
 	<tr>
 		<th class="text-center table-info"><h1>전화번호</h1>
-		
-		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#phone" data-bs-whatever="@TOM">SMS</button>
-		
-		</th>
-		<th class="table-success"><h1>555-5558</h1></th>
+		<th class="table-success">555-5558 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#email" data-bs-whatever="@TOM">SMS</button></th>
 		<th class="text-center table-light"><h1>이메일</h1>
-		
-		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#email" data-bs-whatever="@goodworld">이메일수신</button>
-
-
-		</th>
-		<th class="table-primary"><h1>goodworld@google.com</h1><th>
+		<th class="table-primary">goodworld@google.com <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#email" data-bs-whatever="@goodworld">이메일수신</button><th>
 
 	</tr>
 	
@@ -179,7 +141,7 @@
 		<th class="text-center table-success"><h1>자녀유무</h1></th>
 		<th class="table-danger"><h1>무</h1></th>
 		<th class="text-center table-warning"><h1>좋아하는색깔</h1></th>
-		<th class="table-primary"><h1>노랑색</h1></th>
+		<th class="table-primary"><input type="color" class="form-control form-control-color" id="exampleColorInput" value="#00D5FF"></th>
 	</tr>
 	
 	<tr>
@@ -269,7 +231,6 @@
    
     <!--  -->
     <script type="text/javascript">
-    
     var exampleModal = document.getElementById('email')
     exampleModal.addEventListener('show.bs.modal', function (event) {
       // Button that triggered the modal
@@ -288,29 +249,6 @@
     })
     
     </script>
-    
-    <script type="text/javascript">
-    
-    var exampleModal2 = document.getElementById('phone')
-    exampleModal2.addEventListener('show.bs.modal', function (event) {
-      // Button that triggered the modal
-      var button = event.relatedTarget
-      // Extract info from data-bs-* attributes
-      var recipient = button.getAttribute('data-bs-whatever')
-      // If necessary, you could initiate an AJAX request here
-      // and then do the updating in a callback.
-      //
-      // Update the modal's content.
-      var modalTitle = exampleModal.querySelector('.modal-title')
-      var modalBodyInput = exampleModal.querySelector('.modal-body input')
-
-      modalTitle.textContent = 'Send message to ' + recipient
-      modalBodyInput.value = recipient
-    })
-    
-    </script>
-    
-    
     
     <!-- Optional JavaScript; choose one of the two! -->
 
